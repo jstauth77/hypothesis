@@ -1,3 +1,67 @@
+[project]
+name = "hypothesis"
+version = "0.0.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "alembic",
+    "bcrypt",
+    "bleach",
+    "celery",
+    "certifi",
+    "cffi",
+    "click",
+    "data_tasks",
+    "deform",
+    "elasticsearch==6.8.2",
+    "elasticsearch-dsl==6.4.0",
+    "gevent>=1.4.0",
+    "gunicorn",
+    "h-api",
+    "h-assets",
+    "h-matchers",
+    "h-pyramid-sentry",
+    "importlib_resources",
+    "itsdangerous",
+    "jinja2",
+    "jsonschema",
+    "kombu",
+    "markdown",
+    "markupsafe",
+    "newrelic",
+    "oauthlib",
+    "packaging",
+    "passlib",
+    "psycogreen",
+    "psycopg2",
+    "pycryptodomex",
+    "pyjwt[crypto]",
+    "pyparsing>=2.1.5",
+    "pyramid",
+    "pyramid-exclog",
+    "pyramid-jinja2",
+    "pyramid-mailer",
+    "pyramid-retry",
+    "pyramid-sanity",
+    "pyramid-services",
+    "pyramid-tm",
+    "python-dateutil",
+    "python-slugify<8.1.0",
+    "pytz",
+    "requests",
+    "rfc3339-validator",
+    "sentry-sdk",
+    "sqlalchemy",
+    "sqlparse",
+    "supervisor>=4.0.0",
+    "tabulate",
+    "transaction",
+    "venusian",
+    "ws4py>=0.4.0",
+    "wsaccel",
+    "zope.interface",
+    "zope.sqlalchemy",
+]
+
 [tool.pytest.ini_options]
 addopts = "-q"
 filterwarnings = [
@@ -44,7 +108,7 @@ ignore = [
     # > https://peps.python.org/pep-0257/#multi-line-docstrings
     "D212", "D213",
     "D203", # incorrect-blank-line-before-class. Incompatible with `no-blank-line-before-class` (D211)
-    "E501", # line-too-long (we use the code formatter so we don't need the linter to check line lengths for us).
+    "E501", # line-too-long (we use the code formatter so we don't need a linter to check line lengths for us).
     "PLR2004", # "Magic value used in comparison", this mostly triggers false-positives related to HTTP status codes.
     "PLR6301", # Method could be a function/classmethod/static method (doesn't use self)
     "RET501", # Do not explicitly return None if it's the only possible return value.
